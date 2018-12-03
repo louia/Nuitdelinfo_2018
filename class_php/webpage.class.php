@@ -20,12 +20,22 @@ class WebPage {
     private $body  = null ;
 
     /**
+     * Couleur background top chrome mobile 
+     * ADD by louis 
+     * @var string
+     */
+    private $color  = null ;
+
+    /**
      * Constructeur
      * @param string $title Titre de la page
      */
-    public function __construct(string $title=null) {
+    public function __construct(string $title=null, string $color=null) {
         if (!is_null($title)) {
             $this->setTitle($title) ;
+        }
+        if(!is_null($color)){
+            $this->setColor($color);
         }
     }
 
@@ -45,6 +55,13 @@ class WebPage {
      */
     public function setTitle(string $title) {
         $this->title = $title ;
+    }
+        /**
+     * Affecter la couleur de la page
+     * @param string $color La couleur
+     */
+    public function setColor(string $color) {
+        $this->color = $color ;
     }
 
     /**
@@ -90,7 +107,7 @@ HTML
     public function appendJs(string $js) {
         $this->appendToHead(<<<HTML
     <script type='text/javascript'>
-    $js
+    {$js}
     </script>
 
 HTML
@@ -105,7 +122,7 @@ HTML
      */
     public function appendJsUrl(string $url) {
         $this->appendToHead(<<<HTML
-    <script type='text/javascript' src='$url'></script>
+    <script type='text/javascript' src='{$url}'></script>
 
 HTML
 ) ;
@@ -137,6 +154,8 @@ HTML
 <!doctype html>
 <html lang="fr">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="{$this->color}">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>{$this->title}</title>
 {$this->head}
