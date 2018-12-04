@@ -26,16 +26,26 @@ class WebPage {
      */
     private $color  = null ;
 
+     /**
+     * Couleur background top chrome mobile 
+     * ADD by louis 
+     * @var string
+     */
+    private $icon  = null ;
+
     /**
      * Constructeur
      * @param string $title Titre de la page
      */
-    public function __construct(string $title=null, string $color=null) {
+    public function __construct(string $title=null, string $color=null, string $icon=null) {
         if (!is_null($title)) {
             $this->setTitle($title) ;
         }
         if(!is_null($color)){
             $this->setColor($color);
+        }
+        if(!is_null($icon)){
+            $this->setIcon($icon);
         }
     }
 
@@ -62,6 +72,14 @@ class WebPage {
      */
     public function setColor(string $color) {
         $this->color = $color ;
+    }
+
+    /**
+     * Affecter la couleur de la page
+     * @param string $color La couleur
+     */
+    public function setIcon(string $icon) {
+        $this->icon = $icon ;
     }
 
     /**
@@ -156,6 +174,7 @@ HTML
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="{$this->color}">
+        <link rel="icon" type="image/png" href="{$this->icon}" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>{$this->title}</title>
 {$this->head}
