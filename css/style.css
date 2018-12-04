@@ -1,0 +1,9 @@
+body{
+    height : 2000px;
+  }
+  #nav {
+    transition: background-color 300ms linear ;
+  }
+  .navbar.scrolled {
+    background-color: red !important;
+  }
