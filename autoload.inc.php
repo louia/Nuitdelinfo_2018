@@ -18,6 +18,6 @@ spl_autoload_register(function ($nom_classe /** Nom de la classe dont la défini
         require_once($fichier) ;
     if (file_exists('class_php/' . $fichier))
         // Oui : l'inclure
-        require_once($fichier) ;
+        require_once('class_php/' . $fichier) ;
         }
 ) ;
