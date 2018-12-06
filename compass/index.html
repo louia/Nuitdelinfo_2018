@@ -8,54 +8,79 @@
 
 
   <link rel="stylesheet" href="css/style.css">
-
+  <script src="../js/AjaxRequest.js"></script>
 
 </head>
 
 <body>
   <script>
     window.onload = function () {
-      var angle = 300;
-      var speed = 17;
 
-      var direction = document.getElementById('directionn');
-      var vent = document.getElementById('fleche');
-      var dir = document.getElementById('dir');
+      var angle = 0;
+      var speed = 0;
 
-      direction.innerHTML = "" + speed + " km/h";
-      if (angle > 337.5 || angle <= 22.5) {
-        vent.className = "arrow n";
-        dir.innerHTML = "N";
-      }
-      else if (angle > 22.5 && angle <= 67.5) {
-        vent.className = "arrow ne";
-        dir.innerHTML = "NE";
-      }
-      else if (angle > 67.5 && angle <= 112.5) {
-        vent.className = "arrow e";
-        dir.innerHTML = "E";
-      }
-      else if (angle > 112.5 && angle <= 157.5) {
-        vent.className = "arrow se";
-        dir.innerHTML = "SE";
-      }
-      else if (angle > 157.5 && angle <= 202.5) {
-        vent.className = "arrow s";
-        dir.innerHTML = "S";
-      }
-      else if (angle > 202.5 && angle <= 247.5) {
-        vent.className = "arrow sw";
-        dir.innerHTML = "SW";
-      }
-      else if (angle > 247.5 && angle <= 292.5) {
-        vent.className = "arrow w";
-        dir.innerHTML = "W";
-      }
-      else if (angle > 292.5 && angle <= 337.5) {
-        vent.className = "arrow nw";
-        dir.innerHTML = "NW";
-      }
+      /* Liaison avec l'API */
+      var meteo_request = new AjaxRequest(
+        {
+        url        : "http://api.openweathermap.org/data/2.5/weather",
+        method     : 'GET',
+        handleAs   : 'json',
+        parameters : { lat: '-25', lon:'15', APPID:'654bdbfedfc84c6d70c1e24c92cbc090'},
+        onSuccess  : function(res) {
+            displayBoussole(res['wind']['deg'],res['wind']['speed']);  
+            },
+        onError    : function(status, message) {
+                window.alert('Error ' + status + ': ' + message) ;
+            }
+        }
+    );
+  }
+
+  //dessine la boussole avec 1er arg : angle, deuxième vitesse
+  displayBoussole = function(angle_, speed_){
+    angle = angle_;
+    speed = speed_;
+    console.log(angle);
+
+    var direction = document.getElementById('directionn');
+    var vent = document.getElementById('fleche');
+    var dir = document.getElementById('dir');
+
+    direction.innerHTML = "" + speed + " km/h";
+    if (angle > 337.5 || angle <= 22.5) {
+      vent.className = "arrow n";
+      dir.innerHTML = "N";
     }
+    else if (angle > 22.5 && angle <= 67.5) {
+      vent.className = "arrow ne";
+      dir.innerHTML = "NE";
+    }
+    else if (angle > 67.5 && angle <= 112.5) {
+      vent.className = "arrow e";
+      dir.innerHTML = "E";
+    }
+    else if (angle > 112.5 && angle <= 157.5) {
+      vent.className = "arrow se";
+      dir.innerHTML = "SE";
+    }
+    else if (angle > 157.5 && angle <= 202.5) {
+      vent.className = "arrow s";
+      dir.innerHTML = "S";
+    }
+    else if (angle > 202.5 && angle <= 247.5) {
+      vent.className = "arrow sw";
+      dir.innerHTML = "SW";
+    }
+    else if (angle > 247.5 && angle <= 292.5) {
+      vent.className = "arrow w";
+      dir.innerHTML = "W";
+    }
+    else if (angle > 292.5 && angle <= 337.5) {
+      vent.className = "arrow nw";
+      dir.innerHTML = "NW";
+    }
+  }
+  
   </script>
   <div class="compass">
     <div class="direction">
