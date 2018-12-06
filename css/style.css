@@ -12,3 +12,9 @@ body{
 #nav{
    background-color:#003366 !important;
  }
+
+ #nuit{
+  float: left !important;
+ }
+
+ nav ul li:first-child { float: left; }

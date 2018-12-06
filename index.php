@@ -18,7 +18,7 @@ $p->appendContent(<<<HTML
           <li class="nav-item active">
             <a class="nav-link" href="#">F.A.Q <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item ml-auto">
+          <li class="nav-item" id="nuit">
             <a class="nav-link disabled " href="#">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
           </li>
         </ul>
