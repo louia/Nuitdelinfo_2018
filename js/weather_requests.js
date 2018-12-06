@@ -1,4 +1,4 @@
-document.onload = function(){
+window.onload = function(){
     console.log("Script de requête météo chargé !");
     var request = new AjaxRequest(
         {
