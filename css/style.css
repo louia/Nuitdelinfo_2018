@@ -1,5 +1,6 @@
 body{
     height : 2000px;
+    background-image: url("../img/background.jpg");
   }
   #nav {
     transition: background-color 300ms linear ;
@@ -8,3 +9,4 @@ body{
     background-color: red !important;
   }
 
+ 
