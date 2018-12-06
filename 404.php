@@ -9,7 +9,7 @@ $p->appendCss("body{
     width: 100vh;
     height:100vw;
     transform-origin: 0 0;
-    background: url('https://media.giphy.com/media/11clOWGCHzWG7C/giphy.gif') center;
+    background: url('./404.gif') center;
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment:fixed;

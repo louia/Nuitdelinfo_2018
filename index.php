@@ -19,7 +19,7 @@ $p->appendContent(<<<HTML
             <a class="nav-link" href="#">F.A.Q <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item" id="nuit">
-            <a class="nav-link disabled " href="#">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
+            <a class="nav-link disabled " href="404.php">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
