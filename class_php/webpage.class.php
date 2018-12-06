@@ -140,7 +140,7 @@ HTML
      */
     public function appendJsUrl(string $url) {
         $this->appendToHead(<<<HTML
-        <script type='javascript' src='{$url}'></script>
+        <script src="{$url}"></script>
 
 HTML
 ) ;
