@@ -1,6 +1,6 @@
 body{
     height : 2000px;
-    background-image: url("../img/background.jpg");
+    background-color: beige;
   }
   #nav {
     transition: background-color 300ms linear ;
@@ -9,4 +9,6 @@ body{
     background-color: red !important;
   }
 
- 
+#nav{
+   background-color:#003366 !important;
+ }

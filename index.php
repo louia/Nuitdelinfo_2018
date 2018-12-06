@@ -6,7 +6,7 @@ $p=new WebPage("Nuit de l'info", "#FFFFF","str");
 $p->appendCssUrl("./css/style.css");
 $p->appendContent(<<<HTML
 
-<nav id="nav" class="navbar navbar-expand-md navbar-default fixed-top bg-info">
+<nav id="nav" class="navbar navbar-dark bg-dark ">
       <a class="navbar-brand" href="#">
       <img src="./img/favicon.png" alt="Fav Icon"> 
       </a>
@@ -18,8 +18,8 @@ $p->appendContent(<<<HTML
           <li class="nav-item active">
             <a class="nav-link" href="#">F.A.Q <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
+          <li class="nav-item ml-auto">
+            <a class="nav-link disabled " href="#">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
