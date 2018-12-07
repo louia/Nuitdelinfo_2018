@@ -17,3 +17,14 @@ body{
   float: left !important;
  }
 
+ .row{
+  background-color: #003366;
+  border-radius: 25px;
+  padding: 30px;
+}
+#meteoactu{
+  color: #FFE4C4;
+  font-size: 1.5rem;
+}
+
+
