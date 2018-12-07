@@ -2,10 +2,6 @@
 
 require_once ("autoload.inc.php");
 
-$p=new WebPage("Nuit de l'info", "str","str");
-
-$p->appendContent("coucou");
+$p=new WebPage("Nuit de l'info", "#FFFFF","str");
 
 echo $p->toHTML();
-var_dump($p);
-//echo $p->toHTML();
