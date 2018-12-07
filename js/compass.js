@@ -1,4 +1,20 @@
+function myFunction() {
+    // Get the checkbox
+    var checkBox = document.getElementById("horns");
+    // Get the output text      
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true){
+      document.getElementsByTagName('body')[0].style.backgroundColor = 'black';
+    } else {
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'beige';
+
+    }
+  }
 window.onload = function () {
+    
+
+    
+    
     function timeConverter(UNIX_timestamp) {
         var a = new Date(UNIX_timestamp * 1000);
         var months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];

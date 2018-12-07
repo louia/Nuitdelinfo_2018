@@ -23,7 +23,6 @@ HTML
 );
 
 $p->appendContent(<<<HTML
-
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,8 +35,14 @@ $p->appendContent(<<<HTML
       <li class="nav-item active">
         <a class="nav-link"  href="#">La nuit de l'info  <i class="em em-night_with_stars"></i></a>
       </li>
+
+
       <li class="nav-item">
         <a class="nav-link" href="faq.php">F.A.Q</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link">Thème noire : <input type="checkbox" id="horns" name="horns" onclick="myFunction();"></a>
+        
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -68,6 +73,7 @@ $p->appendContent(<<<HTML
         </div>
         <div class="col-sm-4">
           <p class="text-center" id="meteoactu">Météo actuelle : </p>
+
           <p class="text-center" id="sous-titre"> Température : <span id="temp"></span></p>
           <p class="text-center" id="sous-titre">Humidité : <span id="hum"></span></p>
 
@@ -318,9 +324,74 @@ $p->appendJs(<<<JS
       }
 
     });
-
+    function addGifs() {
+      var img = document.createElement('img');
+      var month = document.getElementsByTagName('h2')[0].innerHTML.split(' ')[0];
+      img.setAttribute('src', "img/gif/" + month + ".gif");
+      console.log(img);
+      document.getElementsByTagName('h2')[0].appendChild(document.createElement('br'));
+      document.getElementsByTagName('h2')[0].appendChild(img);
+    }
+    addGifs();
+    $(":button").click(function() {
+      addGifs();
+    });
   });
 JS
+);
+
+
+$p->appendContent(<<<HTML
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+ 
+<p class="text-center trol">Checklist</p>
+<div class="list-items text-center" style="margin-left: 30%;">
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Bilan de santé</label>
+    <span><i class="fas fa-medkit"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien des panneaux solaires</label>
+    <span><i class="fas fa-solar-panel"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien des éoliennes</label>
+    <span><i class="fas fa-wind"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien des robots</label>
+    <span><i class="fas fa-robot"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien les piles à combustible</label>
+    <span><i class="fas fa-car-battery"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Vérifications et maintenance des systèmes de survie</label>
+    <span><i class="fas fa-cogs"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Contrôle du camp</label>
+    <span><i class="fas fa-eye"></i></span>
+  </div>
+</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</div>
+</div>
+</div>
+
+
+HTML
 );
 
 echo $p->toHTML();
