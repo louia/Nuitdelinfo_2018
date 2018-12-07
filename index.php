@@ -2,7 +2,7 @@
 
 require_once ("autoload.inc.php");
 
-$p=new WebPage("Nuit de l'info", "#FFFFF","str");
+$p=new WebPage("Nuit de l'info", "#FFFFF","./img.favicon_trans.png");
 $p->appendCssUrl("./css/style.css");
 $p->appendContent(<<<HTML
 
