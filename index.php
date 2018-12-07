@@ -16,7 +16,7 @@ $p->appendContent(<<<HTML
     
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link"  href="./404.php">La nuit de l'info  <i class="em em-night_with_stars"></i></a>
+        <a class="nav-link"  href="#">La nuit de l'info  <i class="em em-night_with_stars"></i></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="faq.php">F.A.Q</a>
@@ -24,7 +24,10 @@ $p->appendContent(<<<HTML
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Teste-moi !" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href='./404.php'"><i class="fas fa-search"></i></button>
+      <a href="404.php" ><button class="btn btn-outline-success my-2 my-sm-0" id="myButton"><i class="fas fa-search"></i></button></a>
+      <a href="http://google.fr"><button>lol</button></a>
+
+     
     </form>
   </div>
 </nav>
