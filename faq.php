@@ -30,13 +30,14 @@ $p->appendContent(<<<HTML
   </div>
 </nav>
 
+<div class="container" id="faq">
 
 <div class="alert alert-dark mt-5 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
   Comment se sert-on de la boussole? <i class="far fa-compass"></i>
 </div>
 
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
-  Toujours indiquer le norde devant soit !<br>
+  Toujours indiquer le nord devant soit !<br>
   Il suffit ensuite de lire l'emplacement de l'aiguille.
 </div>
 
@@ -75,7 +76,7 @@ $p->appendContent(<<<HTML
  Yep ! c'est une librairie que seule la NASA utilise pour planifier ses envoie de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
 </div>
 
-
+</div>
 
 HTML
 );
