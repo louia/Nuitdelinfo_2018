@@ -4,7 +4,7 @@ require_once '../class_php/webpage.class.php';
 
 $page = new WebPage("Calendrier");
 
-$page->appendToHead(<<<HEAD
+$page->appendToHead(<<<HTML
   <meta charset='utf-8' />
   <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
   <link href='fullcalendar.css' rel='stylesheet' />
@@ -15,12 +15,12 @@ $page->appendToHead(<<<HEAD
   <script src='locale-all.js'></script>
   <script src='demos/js/theme-chooser.js'></script>
   <script type="text/javascript" src='../js/AjaxRequest.js'></script>
-HEAD
+HTML
 );
 
-$page->appendContent(<<<BODY
+$page->appendContent(<<<HTML
 
-<div id='calendar'></div>
+<div id="calendar"></div>
 <form name='addEvent' action="addEvent.php" method='POST'>
   <div class="container">
 
@@ -71,7 +71,7 @@ $page->appendContent(<<<BODY
   </div>
 </form>
 
-BODY
+HTML
 );
 
 $page->appendCss(<<<CSS

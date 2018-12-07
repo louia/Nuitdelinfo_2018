@@ -23,8 +23,8 @@ $p->appendContent(<<<HTML
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Teste-moi !" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" onclick="window.location.href=\'./404.php\'"><i class="fas fa-search"></i></button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Testez-moi !" aria-label="Search">
+      <a href="404.php" class="btn btn-outline-success my-2 my-sm-0" ><i class="fas fa-search"></i></a>
     </form>
   </div>
 </nav>
