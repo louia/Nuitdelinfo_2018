@@ -16,8 +16,23 @@ $page->appendContent(<<<BODY
   </div>
   <div class="item">
     <input type="checkbox">
-    <label for="">Entretien des matériels</label>
-    <span><i class="fas fa-wrench"></i></span>
+    <label for="">Entretien des panneaux solaires</label>
+    <span><i class="fas fa-solar-panel"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien des éoliennes</label>
+    <span><i class="fas fa-wind"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien des robots</label>
+    <span><i class="fas fa-robot"></i></span>
+  </div>
+  <div class="item">
+    <input type="checkbox">
+    <label for="">Entretien les piles à combustible</label>
+    <span><i class="fas fa-car-battery"></i></span>
   </div>
   <div class="item">
     <input type="checkbox">

@@ -2,29 +2,32 @@
 
 require_once ("autoload.inc.php");
 
-$p=new WebPage("Nuit de l'info", "#FFFFF","./img/favicon_trans.png");
+$p=new WebPage("Nuit de l'info", "#FFFFF","str");
 $p->appendCssUrl("./css/style.css");
 $p->appendContent(<<<HTML
 
-<nav id="nav" class="navbar navbar-dark bg-dark ">
-  <a class="navbar-brand" href="#">
-  <img src="./img/favicon_trans.png" alt="Fav Icon"> 
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#"><img src="./img/favicon.png" alt="Fav Icon"> <span class="sr-only">(current)</a>
+
+    
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">F.A.Q <span class="sr-only">(current)</span></a>
+        <a class="nav-link"  href="#">La nuit de l'info  <i class="em em-night_with_stars"></i></a>
       </li>
-      <li class="nav-item" id="nuit">
-        <a class="nav-link disabled " href="404.php">La nuit de l'info  <i class="em em-night_with_stars"></i> </a>
+      <li class="nav-item">
+        <a class="nav-link" href="faq.php">F.A.Q</a>
       </li>
     </ul>
-    <form class="form-inline mt-2 mt-md-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Teste-moi !" aria-label="Search">
+      <a href="404.php" ><button class="btn btn-outline-success my-2 my-sm-0" id="myButton"><i class="fas fa-search"></i></button></a>
+      <a href="http://google.fr"><button>lol</button></a>
+
+     
     </form>
   </div>
 </nav>
@@ -32,5 +35,6 @@ HTML
 );
 
 
-
 echo $p->toHTML();
+
+
