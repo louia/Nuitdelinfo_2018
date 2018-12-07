@@ -30,7 +30,7 @@ $p->appendContent(<<<HTML
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#"><img src="./img/favicon.png" alt="Fav Icon"> <span class="sr-only">(current)</a>
 
-    
+
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link"  href="#">La nuit de l'info  <i class="em em-night_with_stars"></i></a>
@@ -41,15 +41,16 @@ $p->appendContent(<<<HTML
         <a class="nav-link" href="faq.php">F.A.Q</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link">Thème noire : <input type="checkbox" id="horns" name="horns" onclick="myFunction();"></a>
-        
+        <div class="slidecontainer">
+         <input type="range" min="0" max="255" value="255" class="slider" id="myRange">
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Testez-moi !" aria-label="Search">
       <a href="404.php" class="btn btn-outline-success my-2 my-sm-0" ><i class="fas fa-search"></i></a>
 
-     
+
     </form>
   </div>
 </nav>
@@ -58,7 +59,7 @@ HTML
 $p->appendContent(<<<HTML
 <br>
 <div class="container">
-    
+
 
       <div class="row">
         <div class="col-sm-4">
@@ -346,7 +347,7 @@ $p->appendContent(<<<HTML
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
- 
+
 <p class="text-center trol">Checklist</p>
 <div class="list-items text-center" style="margin-left: 30%;">
   <div class="item">
@@ -395,5 +396,3 @@ HTML
 );
 
 echo $p->toHTML();
-
-
