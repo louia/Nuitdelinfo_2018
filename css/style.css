@@ -18,13 +18,20 @@ body{
  }
 
  .row{
+  padding: 30px;
+}
+.container{
   background-color: #003366;
   border-radius: 25px;
-  padding: 30px;
+  box-shadow: 5px 6px 20px 1px black;
 }
 #meteoactu{
   color: #FFE4C4;
   font-size: 1.5rem;
+}
+#sous-titre{
+  color: #FFE4C4;
+  font-size: 1.3rem;
 }
 
 
