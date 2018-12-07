@@ -73,7 +73,7 @@ $p->appendContent(<<<HTML
 </div>
 
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
- Yep ! c'est une librairie que seule la NASA utilise pour planifier ses envoie de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
+ Yep ! c'est une librairie que seule la NASA utilise pour planifier ses envoies de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
 </div>
 
 </div>
