@@ -126,6 +126,15 @@ $page->appendCss(<<<CSS
     margin: 40px auto;
     padding: 0 10px;
   }
+
+  img[src *= 'r.gif'], img[src *= 's.gif'], img[src *= 'l.gif'], img[src *= 'i.gif'], img[src *= 't.gif'], img[src *= 'e.gif'] {
+    width : 320px;
+    height : 180px;
+  }
+  img[src *= 'n.gif'] {
+    width: 160px;
+    height: 290px;
+  }
 CSS
 );
 
@@ -195,6 +204,19 @@ $page->appendJs(<<<JS
         $('#calendar').fullCalendar('option', 'themeSystem', themeSystem);
       }
 
+    });
+
+    function addGifs() {
+      var img = document.createElement('img');
+      var month = document.getElementsByTagName('h2')[0].innerHTML.split(' ')[0];
+      img.setAttribute('src', "../img/gif/" + month + ".gif");
+      console.log(img);
+      document.getElementsByTagName('h2')[0].appendChild(document.createElement('br'));
+      document.getElementsByTagName('h2')[0].appendChild(img);
+    }
+    addGifs();
+    $(":button").click(function() {
+      addGifs();
     });
 
   });
