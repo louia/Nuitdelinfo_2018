@@ -6,7 +6,20 @@ $p=new WebPage("test",null,"img/favicon.png");
 $p->appendCssUrl("css/style1.css");
 $p->appendCssUrl("css/style.css");
 $p->appendCssUrl("css/icon_weather.css");
-$p->appendsJs(<<<JS
+$p->appendCssUrl("https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css");
+$p->appendJsUrl("https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js");
+$p->appendCss(  "#map { position:absolute; top:0; bottom:0; width:100%; } #row{height: 500px;}");
+
+$p->appendContent(<<<HTML
+<br><br><br><br><br>
+<div class="container">
+  <div class="row" id="row">
+    <div class="col-sm-12">
+      <div id='map'></div>
+    </div>
+  </div>
+</div>
+<script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXhlbG9vIiwiYSI6ImNqcGRhbnd3bDMwam0zd3B4dTFkbnh4Y2EifQ.kDNephGakx_8FbnG3MPtTg';
 const map = new mapboxgl.Map({
   container: 'map',
@@ -17,15 +30,7 @@ const map = new mapboxgl.Map({
   pitch : 60.0
 
 });
-JS
-);
-
-
-$p->appendContent(<<<HTML
-<br><br><br><br><br>
-<div class="container">
-
-  <div id='map'></div>
+</script>
 HTML
 );
 
