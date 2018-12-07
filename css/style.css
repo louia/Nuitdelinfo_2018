@@ -36,6 +36,11 @@ body{
 
 a{
   color:white !important;
+  font-size: 1.2rem !important;
+}
+a:hover{
+  color: #FFE4C4 !important;
+  transition: 300ms !important;
 }
 
 div.input-group, button {
@@ -62,7 +67,7 @@ button {
   padding: 0 10px;
   line-height: 40px;
   font-size: 12px;
-  color: #000;
+  color: #fff;
 }
 
 #top .selector {
@@ -83,5 +88,10 @@ button {
   margin: 40px auto;
   padding: 0 10px;
 }
-
+h2{
+  color: white !important;
+}
+th{
+  color: white !important;
+}
 

@@ -303,12 +303,12 @@ $p->appendJs(<<<JS
           events:
           // your event source
           {
-            url: 'calendar.json',
+            url: 'calendar/calendar.json',
             type: 'POST',
             error: function() {
               alert('there was an error while fetching events!');
             },
-            color: '#003366',   // a non-ajax option
+            color: '#f5f5dc',   // a non-ajax option
             textColor: 'white' // a non-ajax option
           }
         });
