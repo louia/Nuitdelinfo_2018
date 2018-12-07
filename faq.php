@@ -4,6 +4,7 @@ require_once ("autoload.inc.php");
 
 $p=new WebPage("Nuit de l'info", "#FFFFF","str");
 $p->appendCssUrl("./css/style.css");
+
 $p->appendContent(<<<HTML
 
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,6 +29,54 @@ $p->appendContent(<<<HTML
     </form>
   </div>
 </nav>
+
+
+<div class="alert alert-dark mt-5 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
+  Comment se sert-on de la boussole? <i class="far fa-compass"></i>
+</div>
+
+<div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
+  Toujours indiquer le norde devant soit !<br>
+  Il suffit ensuite de lire l'emplacement de l'aiguille.
+</div>
+
+<div class="alert alert-dark mt-4 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
+  Et la météo alors ?! <i class="far fa-sun"></i>
+</div>
+
+<div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
+  Votre navigateur diffuse des données sur votre position, <br>
+  notre script de la mort qui tue s'occupe ensuite d'afficher la température, l'hygrométrie <br>
+  ainsi que la vitesse du vent. Tu remarqueras que dans le dessert il fait chaud. <i class="fas fa-feather"></i>
+</div>
+
+
+<div class="alert alert-dark mt-4 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
+  C'est quoi le truc en haut à droite ? <i class="far fa-sun"></i> - J+2
+</div>
+
+<div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
+  Grâce à notre ballon météorologique nous avons une prévision de la météo jusqu'à J+2.
+</div>
+
+<div class="alert alert-dark mt-4 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
+ Et l'espèce de carte ?
+</div>
+
+<div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
+  C'est effectivement une magnifique carte qui affiche ton emplacement et tout cela sans Google Maps !
+</div>
+
+<div class="alert alert-dark mt-4 mb-0 " role="alert" style="background-color:#003366;color:lightblue;">
+ c'est qu'il a l'air drôlement bien foutu ton calendrier dis donc !
+</div>
+
+<div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
+ Yep ! c'est une librairie que seule la NASA utilise pour planifier ses envoie de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
+</div>
+
+
+
 HTML
 );
 
