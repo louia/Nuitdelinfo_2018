@@ -48,7 +48,7 @@ $p->appendContent(<<<HTML
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
   Votre navigateur diffuse des données sur votre position, <br>
   notre script de la mort qui tue s'occupe ensuite d'afficher la température, l'hygrométrie <br>
-  ainsi que la vitesse du vent. Tu remarqueras que dans le dessert il fait chaud. <i class="fas fa-feather"></i>
+  ainsi que la vitesse du vent. Tu remarqueras que dans le désert il fait chaud. <i class="fas fa-feather"></i>
 </div>
 
 
@@ -57,7 +57,7 @@ $p->appendContent(<<<HTML
 </div>
 
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
-  Grâce à notre ballon météorologique nous avons une prévision de la météo jusqu'à J+2.
+  Grâce à notre ballon météorologique nous avons une prévision de la météo jusqu'à deux jours (J+2).
 </div>
 
 <div class="alert alert-dark mt-4 mb-0" role="alert" style="background-color:#003366;color:lightblue;">
@@ -65,15 +65,15 @@ $p->appendContent(<<<HTML
 </div>
 
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
-  C'est effectivement une magnifique carte qui affiche ton emplacement et tout cela sans Google Maps !
+  C'est effectivement une magnifique carte qui affiche ton emplacement actuel et tout cela sans Google Maps !
 </div>
 
 <div class="alert alert-dark mt-4 mb-0 " role="alert" style="background-color:#003366;color:lightblue;">
- c'est qu'il a l'air drôlement bien foutu ton calendrier dis donc !
+ C'est qu'il a l'air drôlement bien foutu ton calendrier dis donc !
 </div>
 
 <div class="alert alert-dark" role="alert" style="background-color:lightblue;color:#003366;">
- Yep ! c'est une librairie que seule la NASA utilise pour planifier ses envoies de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
+ YEP ! c'est une librairie que seule la NASA utilise pour planifier ses envois de fusée. <i class="fas fa-space-shuttle"></i> <i class="fab fa-rocketchat"></i> <i class="fas fa-rocket"></i>
 </div>
 
 </div>
